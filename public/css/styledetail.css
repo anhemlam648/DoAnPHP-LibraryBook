@@ -1,0 +1,64 @@
+/* Thêm quy tắc CSS mới vào cuối file style.css */
+
+.detail-heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: transparent; /* Loại bỏ màu nền */
+}
+
+.story-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.story-info, .story-description {
+    background-color: transparent; /* Loại bỏ màu nền */
+    color: #3498db; /* Màu chữ của tiêu đề, tác giả, và mô tả */
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.story-title, .story-author, .story-description {
+    margin: 0;
+    font-size: 1em; /* Đặt cỡ chữ cho tiêu đề, tác giả, và mô tả */
+}
+
+.story-author {
+    margin-top: 10px; /* Thêm margin giữa tên truyện và tác giả */
+}
+
+.story-image img {
+    max-width: 30%; /* Giảm kích thước của hình ảnh */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Đưa hình xuống giữa và nằm dưới thông tin */
+    border-radius: 0; /* Loại bỏ bo tròn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-description {
+    max-width: 600px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.read-more-link {
+    display: inline-block; /* Chuyển thành block để có thể sử dụng margin */
+    margin-top: 10px; /* Đặt margin trên cùng để tạo khoảng cách với mô tả */
+    padding: 10px 20px; /* Tạo padding để làm đẹp nút đọc truyện */
+    background-color: #3498db; /* Màu nền của nút đọc truyện */
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 240px; /* Đưa nút về bên phải */
+    text-align: center; /* Căn giữa nút */
+}
+
+.read-more-link:hover {
+    background-color: #2980b9; /* Màu nền thay đổi khi hover */
+}
