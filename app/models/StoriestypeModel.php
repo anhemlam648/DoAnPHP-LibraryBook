@@ -26,6 +26,17 @@ class StoriesTypeModel {
                   VALUES ('$name')";
         return $this->db->conn->query($query);
     }
+    public function updateStorytype($id, $name) {
+        $query = "UPDATE storiestype SET 
+                  name = '$name'
+                  WHERE id = $id";
+    
+        return $this->db->conn->query($query);
+    }
+    public function deleteStorytype($id) {
+        $query = "DELETE FROM storiestype WHERE id = $id";
+        return $this->db->conn->query($query);
+    }
 }
 
 // Sử dụng
