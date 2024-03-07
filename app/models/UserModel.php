@@ -47,6 +47,10 @@ class UserModel
             return null; // Trả về null nếu không tìm thấy người dùng
         }
     }
+    public function Deleteuser($userId){
+        $query ="DELETE FROM users WHERE id = $userId";
+        return $this->db->conn->query($query);
+    }
 
     // public function addUser($username, $password, $name, $email) {
     //         $trimmedPassword = trim($password);
