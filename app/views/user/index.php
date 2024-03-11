@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="/public/css/style.css"> 
 </head>
 
-<body>
+<body> 
+     <!-- Thanh tìm kiếm -->
+     <div class="search-bar">
+    <form action="/app/controllers/SearchController.php" method="post">
+        <input type="text" name="search-input" id="search-input" placeholder="Tìm kiếm...">
+        <button id="search-button" type="submit">Tìm kiếm</button>
+    </form>
+    </div>
     <main>
         <?php
             require_once('C:/xampp/php/www/webdoctruyen/app/controllers/DefaultController.php');

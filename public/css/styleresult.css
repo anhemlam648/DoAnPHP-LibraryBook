@@ -9,24 +9,23 @@ h2 {
     text-align: center;
     margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề h2 */
 }
-
 .story-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 600px; /* Đặt chiều rộng tối đa của story-container */
+    max-width: 600px;
     margin: 20px auto;
 }
 
 .story {
     width: calc(33.33% - 10px);
-    margin-bottom: 10px; /* Giảm khoảng cách giữa các hàng truyện */
+    margin-bottom: 5px; /* Điều chỉnh giá trị margin-bottom để kiểm soát khoảng cách giữa các truyện */
+    margin-right: 2.5px; /* Điều chỉnh giá trị margin-right để kiểm soát khoảng cách giữa các truyện */
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .story img {
     width: 100%;
     height: auto;
@@ -107,4 +106,82 @@ body {
 
 main {
     margin: 20px; /* Tạo ra một khoảng cách giữa thanh tìm kiếm và nội dung chính */
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+    margin: 0px 0; /* Adjust margin */
+}
+
+.search-results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px; /* Đặt chiều rộng tối đa của story-container */
+    margin: 20px auto;
+}
+
+.search-result {
+    background-color: #fff;
+    border: none; /* Loại bỏ khung */
+    padding: 0; /* Loại bỏ padding */
+    margin: 3px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s;
+    margin-top: 10px;
+}
+.result-title {
+    font-size: 16px;
+    margin-bottom: 5px; /* Adjust margin */
+    text-align: center;
+}
+
+.result-author {
+    color: #888;
+    margin-bottom: 5px; /* Adjust margin */
+    text-align: center;
+}
+
+.search-result img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px; /* Adjust margin */
+    border-radius: 8px;
+}
+
+.read-more-link {
+    color: #fff;
+    text-decoration: none;
+    display: block; /* Đặt thành block để chiếm toàn bộ chiều rộng */
+    width: 100%; /* Sử dụng chiều rộng 100% của phần tử cha */
+    padding: 10px 0; /* Điều chỉnh khoảng cách giữa nội dung và viền của liên kết */
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center; /* Căn giữa văn bản */
+}
+
+.read-more-link:hover {
+    background-color: #2980b9;
+}
+.story-title,
+.story-author,
+.read-more-link {
+    margin-top: 10px; /* Điều chỉnh khoảng cách giữa các phần tử */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }

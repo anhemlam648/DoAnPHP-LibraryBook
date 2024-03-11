@@ -87,7 +87,9 @@ $email = urldecode(isset($_GET['email']) ? $_GET['email'] : '');
             <input type="text" name="name" value="<?php echo $name; ?>" required>
             <label for="name">Email:</label>
             <input type="text" name="email" value="<?php echo $email; ?>" required>
-            <a href="/app/views/admin/listuser.php">Back</a>
+            <div>
+            <a href="/app/views/admin/listuser.php" style="display: inline-block; margin-right: 10px; padding: 8px 16px; border-radius: 20px; background-color: #0077cc; color: #fff; text-decoration: none;">Back</a>
+            </div>
         </form>
     </div>
 </body>

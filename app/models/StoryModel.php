@@ -33,6 +33,26 @@ class StoryModel {
             return null; // Trả về null nếu không tìm thấy truyện
         }
     }
+
+    //tìm kiếm
+    public function searchName($name)
+    {
+        $query = "SELECT * FROM stories WHERE title LIKE ?";
+        $name = '%' . $name . '%';
+
+        $stmt = $this->db->conn->prepare($query);
+        $stmt->bind_param("s", $name);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        $stories = [];
+
+        while ($row = $result->fetch_assoc()) {
+            $stories[] = $row;
+        }
+
+        return $stories;
+    }
     //thêm sách
     // public function addStory($title, $description, $image) {
     //     $query = "INSERT INTO stories (title, description, image) 
