@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="/public/css/styleresult.css"> 
 </head>
 <body> 
-    <div class="search-bar">
+    <!-- <div class="search-bar">
         <form action="/app/controllers/SearchController.php" method="post">
             <input type="text" name="search-input" id="search-input" placeholder="Tìm kiếm...">
             <button id="search-button" type="submit">Tìm kiếm</button>
         </form>
     </div>
-    
+     -->
     <div class="search-results-container">
         <?php
         foreach ($result as $story) {

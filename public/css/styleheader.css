@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    /* Thêm dòng này để đảm bảo các phần tử cùng hàng */
+    justify-content: space-around;
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    height: 10px; /* Điều chỉnh chiều cao tại đây */
+    align-self: center;
+    /* Để các phần tử ngang hàng */
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.login-info {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.login-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.login-info a:hover {
+    color: #ffd700;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 30px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.login-info:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+    /* Thêm margin để điều chỉnh khoảng cách với các liên kết trong thanh điều hướng */
+    align-self: center;
+    /* Để thanh tìm kiếm nằm đều với các liên kết */
+}
+
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+#search-button {
+    padding: 8px 12px;
+    background-color: #555;
+    border: 1px solid #555;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #333;
+}

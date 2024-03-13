@@ -10,12 +10,12 @@
 </head>
 
 <body> 
-     <!-- Thanh tìm kiếm -->
+     <!-- Thanh tìm kiếm
      <div class="search-bar">
     <form action="/app/controllers/SearchController.php" method="post">
         <input type="text" name="search-input" id="search-input" placeholder="Tìm kiếm...">
         <button id="search-button" type="submit">Tìm kiếm</button>
-    </form>
+    </form> -->
     </div>
     <main>
         <?php

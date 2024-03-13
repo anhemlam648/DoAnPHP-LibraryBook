@@ -7,181 +7,53 @@ body {
 
 h2 {
     text-align: center;
-    margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề h2 */
-}
-.story-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.story {
-    width: calc(33.33% - 10px);
-    margin-bottom: 5px; /* Điều chỉnh giá trị margin-bottom để kiểm soát khoảng cách giữa các truyện */
-    margin-right: 2.5px; /* Điều chỉnh giá trị margin-right để kiểm soát khoảng cách giữa các truyện */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.story img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px 8px 0 0;
-}
-
-.story-info {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 0 0 8px 8px;
-    text-align: center;
-}
-
-.story-info p {
-    margin: 0;
-    font-size: 12px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.read-more-link {
-    color: #fff;
-    text-decoration: none;
-    display: block; /* Đặt thành block để chiếm toàn bộ chiều rộng */
-    width: 100%; /* Sử dụng chiều rộng 100% của phần tử cha */
-    padding: 10px 0; /* Điều chỉnh khoảng cách giữa nội dung và viền của liên kết */
-    background-color: #3498db;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    text-align: center; /* Căn giữa văn bản */
-}
-
-.read-more-link:hover {
-    background-color: #2980b9;
-}
-.story-title {
-    text-align: center;
-    margin-top: 10px; /* Thêm khoảng cách từ tiêu đề đến ảnh */
-}
-.story-author {
-    text-align: center;
-}
-body {
-    margin: 0;
-}
-
-.search-bar {
-    background-color: #3498db; /* Màu xanh dương */
-    padding: 10px;
-    text-align: center;
-}
-
-#search-input {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-top-left-radius: 25px; /* Bo tròn góc trái trên */
-    border-bottom-left-radius: 25px; /* Bo tròn góc trái dưới */
-}
-
-#search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #2ecc71; /* Màu xanh lá cây */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 25px; /* Bo tròn góc phải trên */
-    border-bottom-right-radius: 25px; /* Bo tròn góc phải dưới */
-}
-
-#search-button:hover {
-    background-color: #27ae60; /* Màu xanh lá cây nhạt khi hover */
-}
-
-main {
-    margin: 20px; /* Tạo ra một khoảng cách giữa thanh tìm kiếm và nội dung chính */
-}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-}
-
-.search-bar {
-    background-color: #3498db;
-    padding: 10px;
-    text-align: center;
-    margin: 0px 0; /* Adjust margin */
+    margin-bottom: 20px;
 }
 
 .search-results-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 600px; /* Đặt chiều rộng tối đa của story-container */
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
     margin: 20px auto;
 }
 
 .search-result {
-    background-color: #fff;
-    border: none; /* Loại bỏ khung */
-    padding: 0; /* Loại bỏ padding */
-    margin: 3px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s;
-    margin-top: 10px;
-}
-.result-title {
-    font-size: 16px;
-    margin-bottom: 5px; /* Adjust margin */
-    text-align: center;
-}
-
-.result-author {
-    color: #888;
-    margin-bottom: 5px; /* Adjust margin */
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
     text-align: center;
 }
 
 .search-result img {
     width: 100%;
     height: auto;
-    margin-bottom: 5px; /* Adjust margin */
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
+}
+
+.result-title {
+    margin-top: 10px;
+}
+
+.result-author {
+    margin-top: 5px; /* Thêm khoảng cách giữa tác giả và tiêu đề */
+    margin-bottom: 15px; /* Thêm khoảng cách giữa tác giả và đọc thêm */
+    font-size: 16px; /* Đặt kích thước chữ cho tác giả */
 }
 
 .read-more-link {
     color: #fff;
     text-decoration: none;
-    display: block; /* Đặt thành block để chiếm toàn bộ chiều rộng */
-    width: 100%; /* Sử dụng chiều rộng 100% của phần tử cha */
-    padding: 10px 0; /* Điều chỉnh khoảng cách giữa nội dung và viền của liên kết */
+    display: block;
+    width: 100%;
+    padding: 10px 0;
     background-color: #3498db;
     border-radius: 5px;
     transition: background-color 0.3s;
-    text-align: center; /* Căn giữa văn bản */
+    text-align: center;
 }
 
 .read-more-link:hover {
     background-color: #2980b9;
-}
-.story-title,
-.story-author,
-.read-more-link {
-    margin-top: 10px; /* Điều chỉnh khoảng cách giữa các phần tử */
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }
