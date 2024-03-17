@@ -39,30 +39,77 @@
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Style cho phần đọc truyện */
+.story-container {
+    text-align: center; /* Căn giữa nội dung */
+    margin-bottom: 20px;
+}
+
+.story-image img {
+    max-width: 50%; /* Điều chỉnh kích thước của hình ảnh */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .story-description {
-    max-width: 600px;
+    max-width: 70%; /* Điều chỉnh kích thước của phần mô tả */
+    margin: 0 auto 20px auto; /* Canh giữa và tạo khoảng cách dưới cùng */
     text-align: justify;
     line-height: 1.6;
-    margin-bottom: 20px;
-    margin-left: 445px; /* Đưa nút về bên phải */
 }
 
-.read-more-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff; 
-    text-decoration: none; 
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    text-align: center; /* Căn giữa nút */
+/* Style cho phần bình luận */
+.comment-section {
+    margin-top: 20px;
+    text-align: center; /* Canh giữa nội dung */
 }
 
-.read-more-link:hover {
-    background-color: #2980b9;
+.comment-form {
+    display: flex;
+    justify-content: center; /* Canh giữa các phần tử bên trong */
+    margin-bottom: 10px;
 }
-.story-description p {
-    text-align: center;
+
+.comment-form textarea {
+    padding: 5px; /* Điều chỉnh kích thước của textarea */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.comment-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px; /* Điều chỉnh kích thước của nút gửi */
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #45a049;
+}
+
+.comment-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Hiển thị các phần tử con dọc xuống */
+    align-items: center; /* Canh giữa các phần tử con */
+}
+
+.comment {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 70%; /* Đảm bảo rằng phần tử .comment không quá rộng */
+    max-width: 500px;
+     /* Giới hạn chiều rộng tối đa của phần tử .comment */
+}
+.no-comments {
+    text-align: center; /* Canh giữa nội dung */
+    color: #999; /* Màu chữ xám nhạt */
 }

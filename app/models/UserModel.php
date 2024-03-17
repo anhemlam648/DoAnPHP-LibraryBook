@@ -112,6 +112,7 @@ class UserModel
 
             if (password_verify($password, $hashedPasswordFromDB)) {
                 session_start();
+                $_SESSION['user_id'] = $user['id']; // Lưu cả id của người dùng vào session
                 $_SESSION['users'] = $user['name'];
                 return $user;
             }
