@@ -74,14 +74,14 @@
 }
 
 .comment-form textarea {
-    padding: 5px; /* Điều chỉnh kích thước của textarea */
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
 }
 
 .comment-form button {
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
@@ -90,7 +90,7 @@
 }
 
 .comment-form button:hover {
-    background-color: #45a049;
+    background-color: #3498db;
 }
 
 .comment-list {
@@ -105,7 +105,7 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    width: 70%; /* Đảm bảo rằng phần tử .comment không quá rộng */
+    width: 70%; 
     max-width: 500px;
      /* Giới hạn chiều rộng tối đa của phần tử .comment */
 }

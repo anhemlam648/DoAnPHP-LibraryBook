@@ -3,33 +3,62 @@ require_once('C:/xampp/php/www/webdoctruyen/app/models/StoryModel.php');
 require_once('C:/xampp/php/www/webdoctruyen/app/models/CommentModel.php');
 require_once('C:/xampp/php/www/webdoctruyen/app/controllers/CommentController.php');
 require_once('C:/xampp/php/www/webdoctruyen/app/models/UserModel.php');
-class DefaultController
+require_once('C:/xampp/php/www/webdoctruyen/app/models/StoriestypeModel.php');
+
+class TypeController
 {
     public function index()
     {
-        $storyModel = new StoryModel();
-        $allStories = $storyModel->getAllStories();
+        // Lấy danh sách tất cả các loại truyện
+        $typeModel = new StoriesTypeModel();
+        $allTypes = $typeModel->getAllTypes();
     
-        echo '<h2>Danh sách truyện</h2>';
-        echo '<div class="story-container">'; 
+        // Hiển thị form lọc
+        echo '<div style="text-align: center;">';
+        echo '<h2 style="margin-bottom: 20px;">Lọc truyện theo loại</h2>';
+        echo '<form action="" method="get">';
+        echo '<select name="type_id" style="padding: 10px; border-radius: 5px;">';
+        echo '<option value="">Tất cả loại truyện</option>';
+        foreach ($allTypes as $type) {
+            echo '<option value="' . $type['id'] . '">' . $type['name'] . '</option>';
+        }
+        echo '</select>';
+        echo '<button type="submit" style="padding: 10px 20px; border-radius: 5px; background-color: #3498db; color: white; border: none; margin-left: 10px;">Lọc</button>';
+        echo '</form>';
+        echo '</div>';
     
+        // Kiểm tra xem người dùng đã chọn loại truyện hay chưa
+        if (isset($_GET['type_id']) && !empty($_GET['type_id'])) {
+            // Lấy danh sách truyện theo loại đã chọn
+            $typeModel = new StoriesTypeModel();
+            $allStories = $typeModel->getStoriesByTypeId($_GET['type_id']);
+        } else {
+            // lấy danh sách tất cả các truyện
+            $storyModel = new StoryModel();
+            $allStories = $storyModel->getAllStories();
+        }
+    
+        // Hiển thị danh sách truyện
+        echo '<div class="story-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 180px;">';
         foreach ($allStories as $story) {
-            echo '<div class="story">';
+            echo '<div class="story" style="background-color: #f0f0f0; border-radius: 10px; padding: 20px; margin: 10px;">';
+            // Hiển thị thông tin truyện
+            echo '<div class="story-content" style="text-align: center;">';
             if (!empty($story['image'])) {
                 $imageData = base64_encode(file_get_contents($story['image']));
                 $src = 'data:' . mime_content_type($story['image']) . ';base64,' . $imageData;
     
-                echo '<img src="' . $src . '" alt="' . $story['title'] . '">';
+                echo '<img src="' . $src . '" alt="' . $story['title'] . '" style="border-radius: 10px; max-width: 100%; max-height: 200px; object-fit: cover; margin-bottom: 10px;">';
             }
-            echo '<h3 class="story-title">' . $story['title'] . '</h3>';
-            echo '<p class="story-author">Tác giả: ' . $story['author'] . '</p>';
-            echo '<a class="read-more-link" href="/app/views/user/story.php?id=' . $story['id'] . '">Đọc thêm</a>';
+            echo '<h3 class="story-title" style="margin-bottom: 5px; font-size: 1.5rem;">' . $story['title'] . '</h3>';
+            echo '<p class="story-author" style="font-style: italic; margin-bottom: 20px;">Tác giả: ' . $story['author'] . '</p>';
+            echo '<a class="read-more-link" href="/app/views/user/story.php?id=' . $story['id'] . '" style="text-decoration: none; background-color: #3498db; color: white; padding: 10px 20px; border-radius: 5px; margin-top: 10px;">Đọc thêm</a>';
+            echo '</div>';
             echo '</div>';
         }
-    
-        echo '</div>'; 
+        echo '</div>';
     }
-
+    
     public function showStoryDetails($storyId)
     {
         $storyModel = new StoryModel();
@@ -52,32 +81,10 @@ class DefaultController
         echo '<div class="story-description">';
         echo '<p>Mô tả: ' . $storyDetails['description'] . '</p>';
         echo '<a class="read-more-link" href="/app/views/user/read.php?id=' . $storyDetails['id'] . '">Đọc truyện</a>';
-        // Thêm các chi tiết khác cần hiển thị
         echo '</div>';
         echo '</div>';
     }
 
-    // public function showStoryRead($storyId)
-    // {
-    //     $storyModel = new StoryModel();
-    //     $storyRead = $storyModel->getStoryById($storyId);
-
-    //     echo '<h2 class="detail-heading">Đọc Truyện</h2>';
-    //     echo '</div>';
-    //     echo '<div class="story-image">';
-    //     if (!empty($storyRead['image'])) {
-    //         $imageData = base64_encode(file_get_contents($storyRead['image']));
-    //         $src = 'data:' . mime_content_type($storyRead['image']) . ';base64,' . $imageData;
-
-    //         echo '<img src="' . $src . '" alt="' . $storyRead['title'] . '">';
-    //     }
-    //     echo '</div>';
-    //     echo '<div class="story-description">';
-    //     echo '<p>Nội dung: ' . $storyRead['content'] . '</p>';
-    //     // Thêm các chi tiết khác cần hiển thị
-    //     echo '</div>';
-    //     echo '</div>';
-    // }
     public function showStoryRead($storyId)
     {
         $storyModel = new StoryModel();
@@ -97,6 +104,7 @@ class DefaultController
         echo '</div>';
         echo '<div class="story-description">';
         echo '<p>Nội dung: ' . $storyRead['content'] . '</p>';
+        // Thêm các chi tiết khác cần hiển thị
         echo '</div>';
     
         // Hiển thị phần bình luận
@@ -119,10 +127,8 @@ class DefaultController
                 $userModel = new UserModel();
                 $user = $userModel->getUserById($comment['user_id']);
                 if ($user) {
-                    // Hiển thị tên người dùng và nội dung bình luận
                     echo '<p><strong>' . $user['name'] . '</strong>: ' . $comment['content'] . '</p>';
                 } else {
-                    // Hiển thị nội dung bình luận nếu không tìm thấy thông tin người dùng
                     echo '<p>' . $comment['content'] . '</p>';
                 }
                 echo '</div>';
@@ -133,6 +139,5 @@ class DefaultController
         }        
         echo '</div>';
     }
-    
 }
 ?>

@@ -24,7 +24,7 @@
     </div>
     <nav>
         <a href="/app/views/user/index.php">Trang chủ</a>
-        <a href="#">Thư viện</a>
+        <a href="/app/views/user/type.php">Thư viện</a>
         <a href="#">Tin tức</a>
         <a href="#">Liên hệ</a>
            <!-- Thanh tìm kiếm-->

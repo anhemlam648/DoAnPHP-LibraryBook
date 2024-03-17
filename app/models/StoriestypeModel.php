@@ -7,7 +7,6 @@ class StoriesTypeModel {
     public function __construct() {
         $this->db = new Database();
     }
-
     // Lấy danh sách tất cả các loại truyện
     public function getAllTypes() {
         $query = "SELECT * FROM storiestype";
@@ -37,10 +36,28 @@ class StoriesTypeModel {
         $query = "DELETE FROM storiestype WHERE id = $id";
         return $this->db->conn->query($query);
     }
+    public function getStoriesByTypeId($typeId)
+    { 
+        $sql = "SELECT * FROM stories WHERE type_id = ?";
+        $stmt = $this->db->conn->prepare($sql);
+        $stmt->bind_param('i', $typeId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if (!$result) {
+            die("Query failed: " . $this->db->conn->error);
+        }
+    
+        $storiesList = [];
+        while ($row = $result->fetch_assoc()) {
+            $storiesList[] = $row;
+        }
+        return $storiesList;
+    }
 }
 
 // Sử dụng
 $typeModel = new StoriesTypeModel();
 $allTypes = $typeModel->getAllTypes();
+// $allTypes = $typeModel->getStoriesByTypeId($typeId);
 // print_r($allTypes);
 ?>
