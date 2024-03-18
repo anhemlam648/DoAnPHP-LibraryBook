@@ -20,11 +20,21 @@ class TypeController
         echo '<select name="type_id" style="padding: 10px; border-radius: 5px;">';
         echo '<option value="">Tất cả loại truyện</option>';
         foreach ($allTypes as $type) {
-            echo '<option value="' . $type['id'] . '">' . $type['name'] . '</option>';
+            // echo '<option value="' . $type['id'] . '">' . $type['name'] . '</option>';
+            echo '<option value ="'.$type['id']. '"';
+            if(isset($_GET['type_id']) && $_GET['type_id']== $type['id']){
+                echo'selected';
+                $selectedTypeName = $type['name'];
+            }
+            echo '>' . $type['name'] .'</option>';
         }
         echo '</select>';
         echo '<button type="submit" style="padding: 10px 20px; border-radius: 5px; background-color: #3498db; color: white; border: none; margin-left: 10px;">Lọc</button>';
         echo '</form>';
+        if (isset($selectedTypeName)) {
+            echo '<p style="margin-top: 10px;">Đã lọc theo loại: ' . $selectedTypeName . '</p>'; // Hiển thị tên loại truyện đã lọc
+        }
+        
         echo '</div>';
     
         // Kiểm tra xem người dùng đã chọn loại truyện hay chưa
