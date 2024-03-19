@@ -19,16 +19,13 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         width: 300px;
-        /* Set a fixed width for each story */
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        /* Arrange content vertically */
     }
 
     .story img {
         max-width: 100%;
-        /* Make sure the image doesn't exceed the container's width */
         border-radius: 8px;
     }
 
@@ -42,7 +39,6 @@
         margin: 4px;
         border: none;
         border-radius: 20px;
-        /* Adjust the radius as needed */
         text-decoration: none;
         font-size: 14px;
         cursor: pointer;
@@ -50,13 +46,11 @@
 
     .update-button {
         background-color: #4CAF50;
-        /* Green color for Update button */
         color: white;
     }
 
     .delete-button {
         background-color: #FF5733;
-        /* Red color for Delete button */
         color: white;
     }
     </style>

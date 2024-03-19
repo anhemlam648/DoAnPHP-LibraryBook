@@ -70,7 +70,6 @@
         <a href="/app/views/admin/listbook.php">Quản lý sách</a>
         <a href="/app/views/admin/listbooktype.php">Quản lý loại sách</a>
         <a href="/app/views/admin/listuser.php">Quản lý người dùng</a>
-        <a href="#">Liên hệ</a>
     </nav>
 </body>
 

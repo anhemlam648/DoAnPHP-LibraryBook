@@ -25,8 +25,8 @@
     <nav>
         <a href="/app/views/user/index.php">Trang chủ</a>
         <a href="/app/views/user/type.php">Thư viện</a>
-        <a href="#">Tin tức</a>
-        <a href="#">Liên hệ</a>
+        <a href="/app/views/user/news.php">Tin tức</a>
+        <a href="/app/views/user/contact.php">Liên hệ</a>
            <!-- Thanh tìm kiếm-->
          <div class="search-bar">
             <form action="/app/controllers/SearchController.php" method="post">

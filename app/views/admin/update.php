@@ -15,9 +15,6 @@ $content = urldecode(isset($_GET['content']) ? $_GET['content'] : '');
     <title>Cập Nhật Sách</title>
     <?php include_once(__DIR__ . '/../partical/headerhome.php'); ?>
     <style>
-        /* Những kiểu dáng hiện tại đi ở đây */
-
-        /* Kiểu dáng bổ sung cho biểu mẫu cập nhật */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
@@ -93,12 +90,16 @@ $content = urldecode(isset($_GET['content']) ? $_GET['content'] : '');
 
             <label for="description">Description:</label>
             <textarea name="description" rows="4" required><?php echo $description; ?></textarea>
-
-            <label for="image" class="custom-file-upload"> Chọn File </label>
-            <input type="file" name="image" id="image" accept="image/*">
-            <?php if ($image !== ''): ?>
-                <img src="<?php echo $image; ?>" alt="Hình ảnh hiện tại" style="max-width: 100%; margin-top: 10px;">
-            <?php endif; ?>
+                <?php
+                $image = isset($_GET['image']) ? urldecode($_GET['image']) : '';
+                // Đường dẫn của hình ảnh
+                $currentImage = ($image !== '') ? $image : '/public/image'; 
+                ?>
+                <label for="image" class="custom-file-upload">Chọn Ảnh</label>
+                <input type="file" name="image" id="image" accept="image/*">
+                <?php if ($currentImage !== '/public/image'): ?>
+                    <img src="<?php echo $currentImage; ?>" alt="Hình ảnh hiện tại" style="max-width: 100%; margin-top: 10px;">
+                <?php endif; ?>
 
             <label for="author">Author:</label>
             <input type="text" name="author" value="<?php echo $author; ?>" required>
@@ -114,6 +115,7 @@ $content = urldecode(isset($_GET['content']) ? $_GET['content'] : '');
             <textarea name="content" rows="4" required><?php echo $content; ?></textarea>
 
             <button type="submit">Cập Nhật Sách</button>
+            <a href="/app/views/admin/listbook.php" style="display: inline-block; padding: 10px 20px; border-radius: 8px; background-color: #FFD700; color: #fff; font-size: 16px; text-decoration: none; margin-top: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Back</a>
         </form>
     </div>
 </body>
