@@ -56,6 +56,16 @@ class DefaultController
         echo '<div class="story-description">';
         echo '<p>Mô tả: ' . $storyDetails['description'] . '</p>';
         echo '<a class="read-more-link" href="/app/views/user/read.php?id=' . $storyDetails['id'] . '">Đọc truyện</a>';
+        // hiển thị button trái tim// Display the average rating
+        // echo '<div class="heart-button-row">';
+        // for ($i = 1; $i <= 5; $i++) {
+        //     echo '<div class="heart-button" onclick="toggleHeartColor(' . $storyId . ', ' . $i . ')">';
+        //     echo '<img id="heartIcon_' . $storyId . '_' . $i . '" src="/public/png/black-heart-silhouette-7.png" alt="Heart" style="width: 25px; height: auto;">';
+        //     echo '</div>';
+        // }
+        // echo '<div id="averageRating_' . $storyId . '">0</div>'; 
+        // echo '</div>';        
+        echo '</div>';
         // Thêm các chi tiết khác cần hiển thị
         echo '</div>';
         echo '</div>';
@@ -139,3 +149,34 @@ class DefaultController
     }
     
 }
+?>
+<!-- <script>
+    function toggleHeartColor(storyId, rating) {
+        var heartIcons = document.querySelectorAll('[id^="heartIcon_' + storyId + '"]');
+        var averageRatingElement = document.getElementById("averageRating_" + storyId);
+        for (var i = 1; i <= 5; i++) {
+            var heartIcon = document.getElementById("heartIcon_" + storyId + "_" + i);
+            if (i <= rating) {
+                heartIcon.src = "/public/png/heart-image-transparent-22.png";
+            } else {
+                heartIcon.src = "/public/png/black-heart-silhouette-7.png";
+            }
+        }
+
+        // Calculate the total rating
+        var currentRating = parseFloat(localStorage.getItem("averageRating_" + storyId)) || 0;
+        var totalCount = parseFloat(localStorage.getItem("totalCount_" + storyId)) || 0;
+        var totalRating = currentRating * totalCount; // This is incorrect
+        totalRating += rating; // Add the new rating to the total rating
+        totalCount++; // Increment the total count
+
+        // Calculate the average rating
+        var averageRating = totalRating / totalCount;
+        localStorage.setItem("averageRating_" + storyId, averageRating.toFixed(1));
+        var averageRating = parseFloat(localStorage.getItem("averageRating_" + storyId)) || 0;
+        // Display the average rating if it's not 0
+        if (averageRating !== 0) {
+            averageRatingElement.textContent = averageRating.toFixed(1);
+        }
+    }
+</script> -->

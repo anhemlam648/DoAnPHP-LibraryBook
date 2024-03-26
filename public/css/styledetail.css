@@ -62,3 +62,10 @@
 .read-more-link:hover {
     background-color: #2980b9; /* Màu nền thay đổi khi hover */
 }
+.heart-button-row {
+    display: flex;
+}
+
+.heart-button {
+    margin-right: 10px; /* Add spacing between buttons */
+}
