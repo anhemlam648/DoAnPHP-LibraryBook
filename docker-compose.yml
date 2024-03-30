@@ -4,5 +4,3 @@ services:
     image: nginx:latest
     ports:
       - "3000:80"
-    volumes:
-      - ./app/views/user:/usr/share/nginx/html
