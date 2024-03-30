@@ -4,6 +4,7 @@ require_once('C:/xampp/htdocs/webdoctruyen/app/models/CommentModel.php');
 require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/CommentController.php');
 require_once('C:/xampp/htdocs/webdoctruyen/app/models/UserModel.php');
 require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/LikeController.php');
+
 class DefaultController
 {
     public function home(){

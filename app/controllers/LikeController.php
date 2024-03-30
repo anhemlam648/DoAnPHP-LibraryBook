@@ -1,5 +1,6 @@
 <!-- <?php
 include_once '/xampp/htdocs/webdoctruyen/app/controllers/DefaultController.php';
+
 // Kiểm tra xem session đã được khởi tạo hay chưa
 if (session_status() == PHP_SESSION_NONE) {
     session_start(); // Khởi tạo session nếu chưa được khởi tạo

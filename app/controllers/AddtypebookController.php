@@ -1,6 +1,7 @@
 <?php
 require_once('C:/xampp/htdocs/webdoctruyen/config/config.php');
 require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoriestypeModel.php');
+
 class AddTypeBookController
 {
     private  $typeModel;

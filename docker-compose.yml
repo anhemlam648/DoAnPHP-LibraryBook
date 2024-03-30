@@ -1,8 +1,18 @@
-version: '3.8'
-services:
-  web:
-    image: nginx:latest
-    ports:
-      - "3000:80"
-    volumes:
-      - C:/Users/Vu Nghia/DoAnPHP/app/views/user/index.php:/usr/share/nginx/html/app/views/user/index.php
+# version: '3.8'
+
+# services:
+#   php:
+#     image: php:7.4-apache
+#     ports:
+#       - "3000:80"
+#     volumes:
+#       - C:/xampp/htdocs/webdoctruyen:/var/www/html
+
+#   mysql:
+#     image: mysql:latest
+#     environment:
+#       MYSQL_DATABASE: doctruyen
+#     volumes:
+#       - C:/xampp/htdocs/webdoctruyen/readbook:/docker-entrypoint-initdb.d
+#     ports:
+#       - "3306:3306"
