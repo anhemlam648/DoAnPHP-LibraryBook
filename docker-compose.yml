@@ -4,3 +4,5 @@ services:
     image: nginx:latest
     ports:
       - "3000:80"
+    volumes:
+      - C:/Users/Vu Nghia/DoAnPHP/app/views/user/index.php:/usr/share/nginx/html/app/views/user/index.php
