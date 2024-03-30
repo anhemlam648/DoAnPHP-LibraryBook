@@ -13,7 +13,7 @@
 <body>
     <main>
         <?php
-            require_once('C:/xampp/php/www/webdoctruyen/app/controllers/DefaultController.php');
+            require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/DefaultController.php');
 
             $storyId = isset($_GET['id']) ? $_GET['id'] : null;
 

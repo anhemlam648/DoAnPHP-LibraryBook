@@ -1,5 +1,5 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/config/database.php');
+require_once('C:/xampp/htdocs/webdoctruyen/config/database.php');
 
 class CommentModel {
     private $db;

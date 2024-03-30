@@ -11,7 +11,7 @@
 <body>
     <main>
         <?php
-        require_once('C:/xampp/php/www/webdoctruyen/app/controllers/ListuserController.php');
+        require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/ListuserController.php');
         $controller = new ListUserController();
         $controller->index();
         ?>

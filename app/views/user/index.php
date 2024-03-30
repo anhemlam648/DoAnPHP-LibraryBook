@@ -19,7 +19,7 @@
     </div> -->
     <main>
         <?php
-            require_once('C:/xampp/php/www/webdoctruyen/app/controllers/DefaultController.php');
+            require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/DefaultController.php');
             $controller = new DefaultController();
             $controller->index();
         ?>

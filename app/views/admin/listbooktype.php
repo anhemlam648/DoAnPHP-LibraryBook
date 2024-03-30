@@ -16,7 +16,7 @@
     </div>
     <main>
         <?php
-        require_once('C:/xampp/php/www/webdoctruyen/app/controllers/ListbooktypeController.php');
+        require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/ListbooktypeController.php');
         $controller = new ListBookTypeAdminController();
         $controller->index();
         ?>

@@ -12,7 +12,7 @@
 <body> 
     <main>
         <?php
-            require_once('C:/xampp/php/www/webdoctruyen/app/controllers/TypeController.php');
+            require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/TypeController.php');
             $controller = new TypeController();
             $controller->index();
         ?>

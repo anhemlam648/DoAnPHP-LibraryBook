@@ -1,7 +1,7 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/config/database.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/StoryModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/StoriestypeModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/config/database.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoryModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoriestypeModel.php');
 class AddBookController
 {
     private $storyModel;
@@ -14,7 +14,7 @@ class AddBookController
 
     public function index()
     {
-        $imageUploadPath = 'C:/xampp/php/www/webdoctruyen/public/image/'; // Đảm bảo kết thúc bằng dấu '/'
+        $imageUploadPath = 'C:/xampp/htdocs/webdoctruyen/public/image/'; // Đảm bảo kết thúc bằng dấu '/'
          // Lấy danh sách loại sách ngay từ đầu
         $typeModel = new StoriesTypeModel();
         $typeList = $this->typeModel->getAllTypes();
@@ -56,7 +56,7 @@ class AddBookController
         }
 
         // Nếu không phải là POST request, hiển thị trang thêm sách
-        include('C:/xampp/php/www/webdoctruyen/app/views/admin/add.php');
+        include('C:/xampp/htdocs/webdoctruyen/app/views/admin/add.php');
     }
 }
 

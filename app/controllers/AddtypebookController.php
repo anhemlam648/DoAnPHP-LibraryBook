@@ -1,6 +1,6 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/config/database.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/StoriestypeModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/config/config.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoriestypeModel.php');
 class AddTypeBookController
 {
     private  $typeModel;
@@ -28,7 +28,7 @@ class AddTypeBookController
         }
 
         // Nếu không phải là POST request, hiển thị trang thêm loại
-        include('C:/xampp/php/www/webdoctruyen/app/views/admin/addtype.php');
+        include('C:/xampp/htdocs/webdoctruyen/app/views/admin/addtype.php');
     }
 }
 

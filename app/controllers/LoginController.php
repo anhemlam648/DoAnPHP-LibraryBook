@@ -1,6 +1,6 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/config/database.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/UserModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/config/database.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/UserModel.php');
 
 class LoginController
 {
@@ -31,7 +31,7 @@ class LoginController
         }
 
         // Nếu không phải là POST request, hiển thị trang đăng nhập
-        include('C:/xampp/php/www/webdoctruyen/app/views/user/login.php');
+        include('C:/xampp/htdocs/webdoctruyen/app/views/user/login.php');
     }
 }
 

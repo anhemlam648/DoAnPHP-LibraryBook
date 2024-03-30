@@ -1,5 +1,5 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/app/controllers/CommentController.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/CommentController.php');
 
 // Khởi tạo đối tượng CommentController
 $commentController = new CommentController();

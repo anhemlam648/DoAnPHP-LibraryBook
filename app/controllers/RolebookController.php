@@ -1,6 +1,6 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/config/database.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/RoleModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/config/database.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/RoleModel.php');
 
 class RoleBookController
 {

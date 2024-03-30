@@ -64,7 +64,7 @@
     </div>
     <main>
         <?php
-        require_once('C:/xampp/php/www/webdoctruyen/app/controllers/ListbookAdminController.php');
+        require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/ListbookAdminController.php');
         $controller = new ListBookAdminController();
         $controller->index();
         ?>

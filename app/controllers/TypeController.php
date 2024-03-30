@@ -1,9 +1,9 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/app/models/StoryModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/CommentModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/controllers/CommentController.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/UserModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/StoriestypeModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoryModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/CommentModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/CommentController.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/UserModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoriestypeModel.php');
 
 class TypeController
 {

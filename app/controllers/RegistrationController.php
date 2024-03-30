@@ -1,6 +1,6 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/config/database.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/UserModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/config/database.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/UserModel.php');
 
 class RegisterController
 {

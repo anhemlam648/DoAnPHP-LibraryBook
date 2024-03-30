@@ -1,13 +1,13 @@
 <?php
-require_once('C:/xampp/php/www/webdoctruyen/app/models/StoryModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/CommentModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/controllers/CommentController.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/models/UserModel.php');
-require_once('C:/xampp/php/www/webdoctruyen/app/controllers/LikeController.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/StoryModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/CommentModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/CommentController.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/models/UserModel.php');
+require_once('C:/xampp/htdocs/webdoctruyen/app/controllers/LikeController.php');
 class DefaultController
 {
     public function home(){
-        include_once '/xampp/php/www/webdoctruyen/app/views/user/index.php';
+        include_once '/xampp/htdocs/webdoctruyen/app/views/user/index.php';
     }
     public function index()
     {
