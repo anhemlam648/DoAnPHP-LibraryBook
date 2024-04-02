@@ -23,7 +23,7 @@ class LoginController
             $result = $this->userModel->verifyUser($username, $password);
             if ($result) {
                 // Chuyển hướng về trang danh sách sách sau khi đăng nhập thành công
-                header('Location: http://localhost:3000/app/views/user/index.php');
+                header('Location: https://webdoctruyenchu.azurewebsites.net/app/views/user/index.php');
                 exit();
             } else {
                 $errorMessage = "Đăng nhập thất bại. Kiểm tra thông tin đăng nhập.";
