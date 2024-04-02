@@ -79,7 +79,7 @@
 <body>
     <div class="login-container">
         <h1>Đăng Nhập</h1>
-        <form method="post" action="webdoctruyenchu.azurewebsites.net/app/controllers/LoginController.php">
+        <form method="post" action="/app/controllers/LoginController.php">
             <?php if (isset($errorMessage)) : ?>
                 <p class="error-message"><?php echo $errorMessage; ?></p>
             <?php endif; ?>
