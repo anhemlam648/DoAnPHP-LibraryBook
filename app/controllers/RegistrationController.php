@@ -24,7 +24,7 @@ class RegisterController
             // Xử lý đăng ký
             $result = $this->userModel->addUser($username, $password, $name, $email);
             if ($result) {
-                header('Location: http://localhost:3000/app/views/user/login.php');
+                header('Location: https://webdoctruyenchu.azurewebsites.net/app/views/user/login.php');
                 exit();
             } else {
                 $registrationMessage = "Đăng ký thất bại. Vui lòng thử lại.";
