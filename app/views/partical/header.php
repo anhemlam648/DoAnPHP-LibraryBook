@@ -17,7 +17,7 @@
             if (isset($_SESSION['users'])) {
                 echo $_SESSION['users'] . " <div class='dropdown-content'><a href='/app/controllers/RolebookController.php'>ADMIN</a> | <a href='http://localhost:3000/app/views/user/logout.php'>Đăng xuất</a></div>";
             } else {
-                echo "<a href='http://localhost:3000/app/views/user/login.php'>Đăng nhập</a>";
+                echo "<a href='https://webdoctruyenchu.azurewebsites.net/app/views/user/login.php'>Đăng nhập</a>";
             }
             ?>
         </div>
