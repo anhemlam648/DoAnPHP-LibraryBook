@@ -75,7 +75,6 @@
     <div class="registration-container">
         <h1>Đăng Ký</h1>
         <form method="post" action="/app/controllers/RegistrationController.php">
-
             <?php if (isset($registrationMessage)) : ?>
                 <p style="color: green; text-align: center;"><?php echo $registrationMessage; ?></p>
             <?php endif; ?>
