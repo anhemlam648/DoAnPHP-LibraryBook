@@ -6,7 +6,7 @@ $url = $_GET['url'] ?? '';
 $url = rtrim($url, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
-
+//
 // Kiểm tra phần đầu tiên của URL để xác định controller
 $controllerName = isset($url[0]) && $url[0] != '' ? ucfirst($url[0]) . 'Controller' : 'AdminController';
 
