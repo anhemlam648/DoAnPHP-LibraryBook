@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "dbutt.mysql.database.azure.com";
-    private $db_name = "readbook";
+    private $db_name = "utt";
     private $username = "vunghia467";
     private $password = "0357708256Asd";
     public $conn;
