@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = "localhost";
+    private $host = "dbutt.mysql.database.azure.com";
     private $db_name = "readbook";
-    private $username = "root";
-    private $password = "";
+    private $username = "vunghia467";
+    private $password = "0357708256Asd";
     public $conn;
 
     // Tạo kết nối
